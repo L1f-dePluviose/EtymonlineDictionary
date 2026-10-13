@@ -10,7 +10,7 @@
 using namespace std;
 
 int main() {
-    cout << "Search for:" << endl;
+    cout << "Search for: " << endl;
 
     vector<string> words;
     string line;
@@ -24,7 +24,7 @@ int main() {
 
     for (const auto& word : words) {
         string url = "https://www.etymonline.com/cn/word/" + word;
-        cout << "打开：" << url << endl;
+        cout << "Open: " << url << endl;
 
         ShellExecuteA(
                 // 父窗口句柄
@@ -41,6 +41,8 @@ int main() {
                 SW_SHOWNORMAL
         );
     }
+
+    cin.get();
 
     return 0;
 }
